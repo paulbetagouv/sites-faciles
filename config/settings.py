@@ -100,6 +100,7 @@ INSTALLED_APPS = [
     "blog",
     "events",
     "forms",
+    "menus",
     "wagtail_honeypot",
     "dashboard",
     "wagtail.admin",
