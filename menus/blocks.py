@@ -37,24 +37,43 @@ class MainMenuSubmenuLinkBlock(BaseMenuLinkBlock):
         template = "menus/blocks/main_menu_link.html"
 
 
-class MainMenuSubmenuStructValue(StructValue):
+class MainMenuMegamenuMainLinkBlock(BaseMenuLinkBlock):
+    text = CharBlock(
+        label=_("Link label"),
+        default=_("See the whole section"),
+    )
+
+    class Meta:
+        template = "menus/blocks/main_menu_link.html"
+
+
+class MainMenuStructValue(StructValue):
     def id(self):
-        text = self.get("text", "")
-        raw_id = slugify(text)
+        label = self.get("label", "")
+        raw_id = slugify(label)
         return f"collapse-menu-{raw_id}"
 
     def menu_urls(self):
         links = self.get("links", [])
+        columns = self.get("columns", [])
 
         urls = []
-        for link in links:
-            urls.append(link.value.url())
+
+        if links:
+            for link in links:
+                urls.append(link.value.url())
+
+        if columns:
+            for column in columns:
+                column_links = column.value.get("links", [])
+                for link in column_links:
+                    urls.append(link.value.url())
 
         return urls
 
 
 class MainMenuSubmenuBlock(StructBlock):
-    text = CharBlock(
+    label = CharBlock(
         label=_("Submenu label"),
         required=True,
     )
@@ -64,13 +83,55 @@ class MainMenuSubmenuBlock(StructBlock):
             ("link", MainMenuSubmenuLinkBlock()),
         ],
         label=_("Links"),
+        min_num=1,
         max_num=8,
-        required=False,
     )
 
     class Meta:
         template = "menus/blocks/main_menu_submenu.html"
-        value_class = MainMenuSubmenuStructValue
+        value_class = MainMenuStructValue
+
+
+class MainMenuMegamenuColumnBlock(MainMenuSubmenuBlock):
+    label = CharBlock(
+        label=_("Column label"),
+        required=True,
+    )
+
+    class Meta:
+        template = "menus/blocks/main_menu_megamenu_column.html"
+        value_class = MainMenuStructValue
+
+
+class MainMenuMegamenuBlock(StructBlock):
+    label = CharBlock(
+        label=_("Mega menu label"),
+        required=True,
+    )
+
+    description = CharBlock(
+        label=_("Description"),
+        required=False,
+    )
+
+    main_link = MainMenuMegamenuMainLinkBlock(
+        label=_("Main link"),
+        required=False,
+    )
+
+    columns = StreamBlock(
+        [
+            ("column", MainMenuMegamenuColumnBlock(label=_("Column"))),
+        ],
+        label=_("Columns"),
+        min_num=1,
+        max_num=4,
+        required=True,
+    )
+
+    class Meta:
+        template = "menus/blocks/main_menu_megamenu.html"
+        value_class = MainMenuStructValue
 
 
 TOP_MENU_BLOCKS = [
@@ -84,4 +145,5 @@ FOOTER_BOTTOM_MENU_BLOCKS = [
 MAIN_MENU_BLOCKS = [
     ("link", MainMenuLinkBlock(label=_("Link"))),
     ("submenu", MainMenuSubmenuBlock(label=_("Submenu"))),
+    ("megamenu", MainMenuMegamenuBlock(label=_("Mega menu"))),
 ]

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-06 15:20+0100\n"
+"POT-Creation-Date: 2025-12-02 15:29+0100\n"
 "PO-Revision-Date: 2025-11-06 15:21+0100\n"
 "Last-Translator: Sylvain Boissel <sylvain@boissel.dev>\n"
 "Language-Team: \n"
@@ -62,7 +62,7 @@ msgstr ""
 "du même côté."
 
 #: content_manager/abstract.py:68 content_manager/blocks/basics.py:310
-#: content_manager/blocks/buttons_links.py:208
+#: content_manager/blocks/buttons_links.py:222
 #: content_manager/blocks/cards.py:131 content_manager/blocks/heros.py:112
 #: content_manager/blocks/heros.py:132 content_manager/blocks/heros.py:152
 #: content_manager/blocks/heros.py:257
@@ -109,11 +109,11 @@ msgstr "Corps"
 msgid "Common page configuration"
 msgstr "Configuration commune"
 
-#: content_manager/abstract.py:196
+#: content_manager/abstract.py:195
 msgid "Base page"
 msgstr "Page de base"
 
-#: content_manager/abstract.py:197
+#: content_manager/abstract.py:196
 msgid "Base pages"
 msgstr "Pages de base"
 
@@ -175,8 +175,8 @@ msgstr "Uniquement pour les tags cliquables"
 
 #: content_manager/blocks/badges_tags.py:43
 #: content_manager/blocks/basics.py:120
-#: content_manager/blocks/buttons_links.py:177
-#: content_manager/blocks/buttons_links.py:223
+#: content_manager/blocks/buttons_links.py:191
+#: content_manager/blocks/buttons_links.py:237
 msgid "Icon"
 msgstr "Icône"
 
@@ -281,8 +281,8 @@ msgid "Adapt to the page layout. Defaults to heading 3."
 msgstr "À adapter à la structure de la page. Par défaut en-tête 3."
 
 #: content_manager/blocks/basics.py:123
-#: content_manager/blocks/buttons_links.py:191
-#: content_manager/blocks/buttons_links.py:199
+#: content_manager/blocks/buttons_links.py:205
+#: content_manager/blocks/buttons_links.py:213
 #: content_manager/blocks/heros.py:110 content_manager/blocks/heros.py:130
 #: content_manager/blocks/heros.py:150
 msgid "Button"
@@ -294,7 +294,7 @@ msgid "Color"
 msgstr "Couleur"
 
 #: content_manager/blocks/basics.py:143
-#: content_manager/blocks/buttons_links.py:230
+#: content_manager/blocks/buttons_links.py:244
 msgid "Size"
 msgstr "Taille"
 
@@ -336,7 +336,7 @@ msgstr "Texte avec mise en forme"
 
 #: content_manager/blocks/basics.py:177 content_manager/blocks/basics.py:251
 #: content_manager/blocks/basics.py:398
-#: content_manager/blocks/buttons_links.py:167
+#: content_manager/blocks/buttons_links.py:181
 #: content_manager/blocks/cards.py:85 content_manager/blocks/cards.py:193
 msgid "Link"
 msgstr "Lien"
@@ -484,7 +484,7 @@ msgid "Tags"
 msgstr "Étiquettes"
 
 #: content_manager/blocks/buttons_links.py:46
-#: content_manager/blocks/buttons_links.py:108
+#: content_manager/blocks/buttons_links.py:122
 msgid "Anchor ID"
 msgstr "Identifiant de l’ancre"
 
@@ -496,34 +496,34 @@ msgstr ""
 "Permet la création d’un lien vers cette partie spécifique de la page. "
 "Caractères autorisés : A-Z, a-z, 0-9, - et _."
 
-#: content_manager/blocks/buttons_links.py:80
-#: content_manager/blocks/buttons_links.py:93
+#: content_manager/blocks/buttons_links.py:94
+#: content_manager/blocks/buttons_links.py:107
 msgid "Page"
 msgstr "Page"
 
-#: content_manager/blocks/buttons_links.py:81
-#: content_manager/blocks/buttons_links.py:103
+#: content_manager/blocks/buttons_links.py:95
+#: content_manager/blocks/buttons_links.py:117
 msgid "External URL"
 msgstr "URL externe"
 
-#: content_manager/blocks/buttons_links.py:82
-#: content_manager/blocks/buttons_links.py:98
+#: content_manager/blocks/buttons_links.py:96
+#: content_manager/blocks/buttons_links.py:112
 msgid "Document"
 msgstr "Document"
 
-#: content_manager/blocks/buttons_links.py:83
+#: content_manager/blocks/buttons_links.py:97
 msgid "Anchor link"
 msgstr "Lien d’ancrage"
 
-#: content_manager/blocks/buttons_links.py:89
+#: content_manager/blocks/buttons_links.py:103
 msgid "Link type"
 msgstr "Type de lien"
 
-#: content_manager/blocks/buttons_links.py:90
+#: content_manager/blocks/buttons_links.py:104
 msgid "Select the type of link."
 msgstr "Sélectionner le type de lien souhaité."
 
-#: content_manager/blocks/buttons_links.py:95
+#: content_manager/blocks/buttons_links.py:109
 msgid ""
 "Link to a page of this site. Use either this, the document, or the external "
 "URL parameter."
@@ -531,15 +531,15 @@ msgstr ""
 "Lien vers une page du site. Utilisez soit ce champ, soit le champ document, "
 "soit le champ URL externe."
 
-#: content_manager/blocks/buttons_links.py:99
+#: content_manager/blocks/buttons_links.py:113
 msgid "Use either this, the external URL or the page parameter."
 msgstr "Utilisez soit ce champ, soit le champ URL externe, soit le champ Page."
 
-#: content_manager/blocks/buttons_links.py:105
+#: content_manager/blocks/buttons_links.py:119
 msgid "Use either this, the document or the page parameter."
 msgstr "Utilisez soit ce champ, soit le champ Document, soit le champ Page."
 
-#: content_manager/blocks/buttons_links.py:109
+#: content_manager/blocks/buttons_links.py:123
 msgid ""
 "Link to an anchor block on the page. Allowed characters: A-Z, a-z, 0-9, - "
 "and _."
@@ -547,35 +547,35 @@ msgstr ""
 "Lien vers un bloc ancre de la page. Caractères autorisés : A-Z, a-z, 0-9, - "
 "et _."
 
-#: content_manager/blocks/buttons_links.py:136
+#: content_manager/blocks/buttons_links.py:150
 msgid "Please select a page to link to"
 msgstr "Veuillez sélectionner une page"
 
-#: content_manager/blocks/buttons_links.py:140
+#: content_manager/blocks/buttons_links.py:154
 msgid "Please enter a URL"
 msgstr "Veuillez saisir une URL"
 
-#: content_manager/blocks/buttons_links.py:144
+#: content_manager/blocks/buttons_links.py:158
 msgid "Please select a document to link to"
 msgstr "Veuillez sélectionner un document"
 
-#: content_manager/blocks/buttons_links.py:159
+#: content_manager/blocks/buttons_links.py:173
 msgid "Link label"
 msgstr "Libellé du lien"
 
-#: content_manager/blocks/buttons_links.py:175
+#: content_manager/blocks/buttons_links.py:189
 msgid "Button label"
 msgstr "Libellé du bouton"
 
-#: content_manager/blocks/buttons_links.py:176
+#: content_manager/blocks/buttons_links.py:190
 msgid "Button type"
 msgstr "Type de bouton"
 
-#: content_manager/blocks/buttons_links.py:179
+#: content_manager/blocks/buttons_links.py:193
 msgid "Icon side"
 msgstr "Côté de l’icône"
 
-#: content_manager/blocks/buttons_links.py:210
+#: content_manager/blocks/buttons_links.py:224
 #: content_manager/blocks/heros.py:114 content_manager/blocks/heros.py:134
 #: content_manager/blocks/heros.py:154
 msgid ""
@@ -587,11 +587,11 @@ msgstr ""
 "Si vous utilisez des icônes, mettez-en sur tous les boutons et alignez-les "
 "du même côté."
 
-#: content_manager/blocks/buttons_links.py:214
+#: content_manager/blocks/buttons_links.py:228
 msgid "Position"
 msgstr "Position"
 
-#: content_manager/blocks/buttons_links.py:224
+#: content_manager/blocks/buttons_links.py:238
 msgid "Only used for internal links."
 msgstr "Uniquement pour les liens internes."
 
@@ -1707,12 +1707,12 @@ msgstr "Maximum 4 catégories, chacune contenant maximum 8 liens."
 msgid "Mega menu"
 msgstr "Méga menu"
 
-#: content_manager/templates/content_manager/blocks/blog_recent_entries.html:108
-#: content_manager/templates/content_manager/blocks/events_recent_entries.html:108
+#: content_manager/templates/content_manager/blocks/blog_recent_entries.html:107
+#: content_manager/templates/content_manager/blocks/events_recent_entries.html:107
 msgid "No article found."
 msgstr "Aucun article trouvé."
 
-#: content_manager/templates/content_manager/blocks/blog_recent_entries.html:112
+#: content_manager/templates/content_manager/blocks/blog_recent_entries.html:111
 msgid "See all posts"
 msgstr "Voir tous les articles"
 
@@ -1749,7 +1749,7 @@ msgstr "Format de fichier inconnu"
 msgid "Unknown file size"
 msgstr "Taille de fichier inconnue"
 
-#: content_manager/templates/content_manager/blocks/events_recent_entries.html:112
+#: content_manager/templates/content_manager/blocks/events_recent_entries.html:111
 msgid "See all events"
 msgstr "Voir tous les événements"
 
